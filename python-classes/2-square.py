@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""this module defins a squar clas"""
+"""this module defines a square class"""
 
 
 class Square:
-    """defines a squar with validashun for size"""
+    """defines a square with validation for size"""
 
     def __init__(self, size=0):
-        """initializes the size of the squar"""
+        """initializes the size of the square"""
         self.size = size
 
     @property
@@ -16,9 +16,9 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """setter for size with validashun"""
+        """setter for size with validation"""
         if type(value) is not int:
-            raise TypeError("size must be an intiger")
+            raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
