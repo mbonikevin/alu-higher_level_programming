@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """this module defins a square class"""
 
+
 class Square:
     """squar class with size and aria."""
     def __init__(self, size=0, position=(0, 0)):
