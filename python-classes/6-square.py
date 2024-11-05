@@ -2,8 +2,7 @@
 """this module defins a square class"""
 
 class Square:
-    """Class Square that defines a square with a private attribute size, validation, area calculation, position management, and printing functionality."""
-
+    """squar class with size and aria."""
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
