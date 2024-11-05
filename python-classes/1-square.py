@@ -3,8 +3,8 @@
 
 
 class Square:
-    """defines a squar with a siez""" 
-    
+    """defines a squar with a siez"""
+
     def __init__(self, size):
-        """initializes the siez of the squar""" 
+        """initializes the siez of the squar"""
         self.__size = size

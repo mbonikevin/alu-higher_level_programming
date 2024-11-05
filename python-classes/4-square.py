@@ -3,20 +3,20 @@
 
 
 class Square:
-    """defines a squar with getter and setter for size""" 
-    
+    """defines a squar with getter and setter for size"""
+
     def __init__(self, size=0):
-        """initializes the siez of the squar""" 
+        """initializes the siez of the squar"""
         self.size = size
 
     @property
     def size(self):
-        """getter for size""" 
+        """getter for size"""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """setter for size with validashun""" 
+        """setter for size with validashun"""
         if type(value) is not int:
             raise TypeError("size must be an intiger")
         if value < 0:
@@ -24,10 +24,10 @@ class Square:
         self.__size = value
 
     def area(self):
-        """returns the area of the squar""" 
+        """returns the area of the squar"""
         return self.__size ** 2
 
     def my_print(self):
-        """prints the squar using the # charactar""" 
+        """prints the squar using the # charactar"""
         for _ in range(self.__size):
             print("#" * self.__size)
