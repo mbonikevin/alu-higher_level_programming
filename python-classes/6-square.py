@@ -2,6 +2,7 @@
 """This module defines a square class."""
 
 
+
 class Square:
     """Square class with size and position."""
 
