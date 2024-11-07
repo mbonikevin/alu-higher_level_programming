@@ -3,4 +3,5 @@
 
 
 class Rectangle:
+    """placeholder"""
     pass
