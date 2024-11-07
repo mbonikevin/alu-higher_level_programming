@@ -46,4 +46,7 @@ class Rectangle:
         return "\n".join(["#" * self.width] * self.height)
 
     def __repr__(self):
-        return f"<{self.__class__.__module__}.{self.__class__.__name__} object at {hex(id(self))}>"
+        return (
+            f"<{self.__class__.__module__}.{self.__class__.__name__} "
+            f"object at {hex(id(self))}>"
+        )
