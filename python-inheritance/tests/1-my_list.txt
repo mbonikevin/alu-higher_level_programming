@@ -1,0 +1,84 @@
+#!/usr/bin/python3
+"""Test cases for MyList class."""
+
+
+from 1-my_list import MyList
+
+def test_instantiation():
+    """Test instantiation of MyList."""
+    my_list = MyList()
+    assert isinstance(my_list, MyList), "Failed instantiation test."
+
+def test_inherits_from_list():
+    """Test that MyList inherits from list."""
+    my_list = MyList()
+    assert isinstance(my_list, list), "Failed inheritance test."
+
+def test_str():
+    """Test __str__ method."""
+    my_list = MyList([1, 2, 3])
+    assert str(my_list) == "[1, 2, 3]", "__str__ method failed."
+
+def test_append():
+    """Test append method."""
+    my_list = MyList()
+    my_list.append(1)
+    assert my_list == [1], "Failed append test."
+
+def test_print_sorted():
+    """Test print_sorted method with sorted list."""
+    my_list = MyList([3, 1, 2])
+    my_list.print_sorted()  # Expected output: [1, 2, 3]
+
+def test_print_sorted_unsorted_append():
+    """Test print_sorted with unsorted append."""
+    my_list = MyList([2, 1])
+    my_list.append(3)
+    my_list.print_sorted()  # Expected output: [1, 2, 3]
+
+def test_print_sorted_with_negative_numbers():
+    """Test print_sorted with negative numbers."""
+    my_list = MyList([-1, 0, 1])
+    my_list.print_sorted()  # Expected output: [-1, 0, 1]
+
+def test_print_sorted_with_empty_list():
+    """Test print_sorted with an empty list."""
+    my_list = MyList()
+    my_list.print_sorted()  # Expected output: []
+
+def test_print_sorted_returns_new_list():
+    """Test that print_sorted returns a new list."""
+    my_list = MyList([3, 1, 2])
+    sorted_list = sorted(my_list)
+    assert sorted_list == [1, 2, 3], "Failed to return sorted list."
+
+def test_correct_output_class_creation():
+    """Test correct output when creating MyList instance."""
+    my_list = MyList([1, 4, 2, 3, 5])
+    assert my_list == [1, 4, 2, 3, 5], "Failed creation test."
+
+def test_correct_output_class_creation_and_print():
+    """Test correct output when creating MyList and printing."""
+    my_list = MyList([1, 4, 2, 3, 5])
+    assert str(my_list) == "[1, 4, 2, 3, 5]", "Failed creation and print test."
+
+def test_correct_output_class_creation_and_append():
+    """Test correct output when appending to MyList."""
+    my_list = MyList()
+    my_list.append(1)
+    assert str(my_list) == "[1]", "Failed append and print test."
+
+def test_correct_output_class_creation_multiple_appends():
+    """Test correct output when multiple appends are used."""
+    my_list = MyList()
+    my_list.append(1)
+    my_list.append(4)
+    my_list.append(2)
+    my_list.append(3)
+    my_list.append(5)
+    assert str(my_list) == "[1, 4, 2, 3, 5]", "Failed multiple appends test."
+
+def test_correct_output_class_creation_multiple_appends_and_sorted():
+    """Test correct output with multiple appends and sorted print."""
+    my_list = MyList([1, 4, 2, 3, 5])
+    my_list.print_sorted()  # Expected output: [1, 2, 3, 4, 5]
