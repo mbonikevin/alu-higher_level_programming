@@ -1,13 +1,25 @@
 #!/usr/bin/python3
-"""8 rectangle"""
+"""rectangle class that inherits from basegeometry"""
 
 
-from 7-base_geometry import BaseGeometry
+class BaseGeometry:
+    """basegeometry class with integer_validator method"""
+    def integer_validator(self, name, value):
+        """validates the value as a positive integer"""
+        if type(value) is not int:
+            raise TypeError(f"{name} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{name} must be greater than 0")
 
 class Rectangle(BaseGeometry):
-    """soecial method"""
+    """rectangle class that inherits from basegeometry"""
     def __init__(self, width, height):
+        """initializes the width and height, both are validated"""
         self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width
         self.__height = height
+
+    def __str__(self):
+        """returns the string representation of the rectangle"""
+        return f"[Rectangle] {self.__width}/{self.__height}"
