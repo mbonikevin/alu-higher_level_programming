@@ -1,14 +1,9 @@
 #!/usr/bin/python3
-"""Module that defines a subclass of list with a method to print the list sorted."""
+"""1 my list"""
 
 
 class MyList(list):
-    """A subclass of list that includes a method to print the list in ascending order."""
-    
+    """subclass of list with a method to print the sorted list"""
     def print_sorted(self):
-        """Print the list in ascending order."""
+        """printnig the list in ascending order"""
         print(sorted(self))
-
-    def __str__(self):
-        """Return the string representation of the list."""
-        return str(self)
