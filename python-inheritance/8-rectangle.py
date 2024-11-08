@@ -11,6 +11,7 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
 
+
 class Rectangle(BaseGeometry):
     """rectangle class that inherits from basegeometry"""
     def __init__(self, width, height):
@@ -27,3 +28,5 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         """returns the string representation of the rectangle"""
         return f"[Rectangle] {self.__width}/{self.__height}"
+
+print(issubclass(Rectangle, BaseGeometry))
