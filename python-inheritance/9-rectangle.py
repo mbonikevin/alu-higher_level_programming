@@ -1,21 +1,23 @@
 #!/usr/bin/python3
-"""9 rectangle"""
+"""9 recvtangle"""
 
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-from 7-base_geometry import BaseGeometry
 
 class Rectangle(BaseGeometry):
-    """soecial method"""
+    """special method"""
     def __init__(self, width, height):
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
+        """deting width and height."""
+        super().integer_validator("width", width)
         self.__width = width
+        super().integer_validator("height", height)
         self.__height = height
 
-    """area method"""
     def area(self):
+        """area method"""
         return self.__width * self.__height
 
-    """__str__"""
     def __str__(self):
-        return f"[Rectangle] {self.__width}/{self.__height}"
+        """string"""
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+    
