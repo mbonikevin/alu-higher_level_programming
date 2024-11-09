@@ -6,8 +6,8 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 
-class BaseGeometry:
-    """basegeometry class with integer_validator method"""
+class Rectangle(BaseGeometry):
+    """special method """
     def __init__(self, width, height):
         """seting with width and height"""
         super().integer_validator("width", width)
