@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""9 recvtangle"""  
+"""9 recvtangle"""
+
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
