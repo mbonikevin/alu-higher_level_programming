@@ -5,7 +5,6 @@
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
-
 class Rectangle(BaseGeometry):
     """special method """
     def __init__(self, width, height):
@@ -14,7 +13,6 @@ class Rectangle(BaseGeometry):
         self.__width = width
         super().integer_validator("height", height)
         self.__height = height
-
 
     def area(self):
         """area methos"""
