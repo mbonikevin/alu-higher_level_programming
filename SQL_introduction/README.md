@@ -1,1 +1,2 @@
-SQL INTRODUCTION
+-- list all databases
+SQL INTRODUCTION;
