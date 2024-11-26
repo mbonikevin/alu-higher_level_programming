@@ -2,7 +2,7 @@
 """ fetching https://alx-intranet.hbtn.io/status"""
 import urllib.request
 
-
+""" getting repsonce"""
 with urllib.request.urlopen('https://alu-intranet.hbtn.io/status') as response:
     """ getting repsonce"""
     body = response.read()
