@@ -1,15 +1,10 @@
 #!/usr/bin/python3
-"""
-Fetches the status of the URL https://alu-intranet.hbtn.io/status
-Displays the body response with:
-- type of content
-- raw content
-- utf-8 decoded content
-"""
-
+""" fetching https://alx-intranet.hbtn.io/status"""
 import urllib.request
 
+
 with urllib.request.urlopen('https://alu-intranet.hbtn.io/status') as response:
+    """ getting repsonce"""
     body = response.read()
     print("Body response:")
     print(f"\t- type: {type(body)}")
