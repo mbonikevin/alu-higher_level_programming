@@ -1,15 +1,14 @@
 #!/usr/bin/python3
-"""sending a POST request to the givcen URL"""
-import urllib.request
-import urllib.parse
-from sys import argv
+"""error code
+"""
 
 
 if __name__ == "__main__":
-    url = argv[1]
-    email = argv[2]
-    content = urllib.parse.urlencode({'email': email}).encode('utf-8')
-    req = urllib.request.Request(url, data=content, method='POST')
-    with urllib.request.urlopen(req) as response:
-        content = response.read().decode('utf-8')
-        print(content)
+    import sys
+    from urllib import request, error
+
+    try:
+        with request.urlopen(sys.argv[1]) as res:
+            print(res.read().decode('UTF-8'))
+    except error.HTTPError as er:
+        print('Error code:', er.code)
