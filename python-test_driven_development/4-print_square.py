@@ -5,9 +5,9 @@
 def print_square(size):
     """print the results"""
     if not isinstance(size, int):
-        raise TypeError("not an integer")
+        raise TypeError("size must be an integer")
     if size < 0:
-        raise ValueError("size is not >= 0")
+        raise ValueError("size must be >= 0")
 
     for i in range(size):
         [print("#", end="") for j in range(size)]
