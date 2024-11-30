@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-Adds a new State object with the name "Louisiana" to the database hbtn_0e_6_usa.
-After the addition, it prints the id of the newly added State object.
+Adds a new State object with the name
+"Louisiana" to the database hbtn_0e_6_usa After
+the addition, it prints the id of the newly added State object.
 """
 import sys
 from model_state import Base, State

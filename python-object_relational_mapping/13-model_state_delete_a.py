@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
-Deletes all State objects from the database hbtn_0e_6_usa where the name contains the letter 'a'.
-This operation will remove all such states from the database.
+Deletes all State objects from the
+database hbtn_0e_6_usa where the name
+contains the letter 'a' This operation
+will remove all such states from the database.
 """
 import sys
 from model_state import Base, State

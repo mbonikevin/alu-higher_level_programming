@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
-Changes the name of a State object with a specific id (2) in the database hbtn_0e_6_usa.
-The state name is updated to "New Mexico" and changes are committed to the database.
+Changes the name of a State object
+with a specific id (2) in the database hbtn_0e_6_usa
+The state name is updated to "New Mexico"
+and changes are committed to the database.
 """
 import sys
 from model_state import Base, State
