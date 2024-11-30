@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""sending a POST request to the givven URL"""
+"""Sending a POST request to the givven URL"""
 import urllib.request
 import urllib.parse
 import sys
